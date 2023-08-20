@@ -53,47 +53,45 @@ function addMessage(content, sender) {
     'p-2',
     'mb-2',
     'flex',
-    'items-center',
     'gap-1.5'
   );
 
   const senderImage = document.createElement('img');
-  senderImage.classList.add('avatar', 'rounded');
+  senderImage.classList.add('avatar', 'rounded', 'flex', 'items-start');
   senderImage.src = sender === 'user' ? 'assets/user.png' : 'assets/chatnlp.png';
   senderImage.alt = sender === 'user' ? 'User Avatar' : 'Bot Avatar';
 
   messageDiv.appendChild(senderImage);
 
   const messageContent = document.createElement('span');
-  messageContent.classList.add('text-white', 'mr-2');
+  messageContent.classList.add('text-white', 'mr-2', 'flex', 'items-center');
   messageContent.textContent = content;
 
   messageDiv.appendChild(messageContent);
   chatContainer.appendChild(messageDiv);
   chatContainer.scrollTop = chatContainer.scrollHeight;
-}
+};
 
 async function simulateTyping(text, sender) {
-  const typingDelay = 10;
+  const typingDelay = 6;
   const messageDiv = document.createElement('div');
   messageDiv.classList.add(sender === 'user' ? 'chat-message' : 'chat-message-nlp', 
     'rounded-lg', 
     'p-2', 
     'mb-2', 
-    'flex', 
-    'items-center',
+    'flex',
     'gap-1.5'
   );
 
   const senderImage = document.createElement('img');
-  senderImage.classList.add('avatar', 'rounded');
+  senderImage.classList.add('avatar', 'rounded', 'flex', 'items-start');
   senderImage.src = sender === 'user' ? 'user.png' : 'assets/chatnlp.png';
   senderImage.alt = sender === 'user' ? 'User Avatar' : 'Bot Avatar';
 
   messageDiv.appendChild(senderImage);
 
   const messageContent = document.createElement('span');
-  messageContent.classList.add('text-white');
+  messageContent.classList.add('text-white', 'mr-2', 'flex', 'items-center');
   messageDiv.appendChild(messageContent);
   chatContainer.appendChild(messageDiv);
 

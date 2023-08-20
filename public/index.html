@@ -10,7 +10,13 @@
   <link type="image/png" sizes="96x96" rel="icon" href="assets/favicon.png">
 </head>
 
-<body>
+<body style="margin: 0; overflow: hidden;">
+  <div
+    class="relative z-20 flex min-h-[50px] flex-wrap items-center justify-between gap-3 border-b border-black border-opacity-10 p-2 text-gray-500" style="background-color: #353641;">
+    <div class="flex flex-1 flex-grow items-center gap-1 p-1 text-gray-600 dark:text-gray-200 sm:justify-center sm:p-0">
+      <span>Default (NLP-1.0)</span></div>
+  </div>
+
   <div class="h-screen">
     <div class="container mx-auto p-4 relative">
       <div class="max-w-3xl mx-auto py-4 mb-4 rounded-lg overflow-auto">
@@ -50,7 +56,7 @@
 
   <div class="fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full z-40">
     <div class="w-full h-24 absolute bottom-0 left-0 -mt-2"
-      style="box-shadow: 0 0 32px rgba(53, 54, 65, 1); background-color: #353641;"></div>
+      style="box-shadow: 0 0 24px rgba(53, 54, 65, 1); background-color: #353641;"></div>
   </div>
   <script src="app.js"></script>
 </body>
