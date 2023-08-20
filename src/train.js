@@ -16,8 +16,8 @@ const { dockStart } = require('@nlpjs/basic');
 
   const manager = dock.get('nlp');
 
-  const trainingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'train.json'), 'utf8'));
-  const regexEntities = JSON.parse(fs.readFileSync(path.join(__dirname, 'regexEntities.json'), 'utf8'));
+  const trainingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/train.json'), 'utf8'));
+  const regexEntities = JSON.parse(fs.readFileSync(path.join(__dirname, 'data/regexEntities.json'), 'utf8'));
 
   // (Optional) Adds regex entities, basically "context" that the NLP can use in chat
   regexEntities.forEach(entityRule => {
