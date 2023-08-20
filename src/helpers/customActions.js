@@ -22,6 +22,9 @@ function performMathOperation(operation) {
             "The answer is:",
             "Here's the result:",
             "I calculated it to be:",
+            "It's:",
+            "The result is:",
+            "It's equal to:",
         ];
         const randomMessage = messages[Math.floor(Math.random() * messages.length)];
         return `${randomMessage} ${result}`;
@@ -38,7 +41,7 @@ function executeJavaScript(command) {
     try {
         const jsCode = command.substring(3);
         const result = eval(jsCode);
-        return `JavaScript output: ${result}`;
+        return `JavaScript output: ${result.toString()}`;
     } catch (error) {
         return "Sorry, I couldn't execute that JavaScript code.";
     }
