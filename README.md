@@ -12,8 +12,8 @@
 </div>
 <br>
 <div align="center">
-    <a href="https://github.com/survivalq/VOCO-discord-bot" style="display: inline-block; margin: 0 5px;">
-      <img alt="License" src="https://img.shields.io/github/license/survivalq/VOCO-discord-bot">
+    <a href="https://github.com/survivalq/ChatNLP" style="display: inline-block; margin: 0 5px;">
+      <img alt="License" src="https://img.shields.io/github/license/survivalq/ChatNLP">
 </div>
 
 ---
