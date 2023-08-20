@@ -1,0 +1,62 @@
+[
+    {
+        "intent": "user.age",
+        "utterances": [
+            "My age is %age%",
+            "I'm %age% years old"
+        ],
+        "answers": [
+            "You are {{ age }} years old!"
+        ],
+        "patterns": [
+            {
+                "entity": "age",
+                "conditions": [
+                    "is",
+                    "I'm"
+                ]
+            }
+        ]
+    },
+    {
+        "intent": "user.name",
+        "utterances": [
+            "My name is %name%",
+            "Call me %name%"
+        ],
+        "answers": [
+            "Hello {{ name }}!"
+        ],
+        "patterns": [
+            {
+                "entity": "name",
+                "conditions": [
+                    "is"
+                ]
+            }
+        ]
+    },
+    {
+        "intent": "user.summary",
+        "utterances": [
+            "Tell me about me",
+            "Summarize my information",
+            "Recap my details"
+        ],
+        "answers": [
+            "You are {{age}} years old and your name is {{name}}.",
+            "Your name is {{name}} and you are {{age}} years old.",
+            "You are {{age}} years old and your name is {{name}}.",
+            "Your called {{name}} and you are {{age}} years old."
+        ]
+    },     
+    {
+        "intent": "user.age",
+        "utterances": [
+            "What's my age?"
+        ],
+        "answers": [
+            "You are {{age}} years old!"
+        ]
+    }
+]

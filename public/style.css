@@ -1,0 +1,40 @@
+body {
+    background-color: #444654;
+}
+
+.chat-message {
+    background-color: #343541;
+    width: 98%;
+}
+
+.chat-message-nlp {
+    background-color: #444654;
+}
+
+.chat-container {
+    max-height: calc(100vh - 150px);
+    overflow: auto;
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background-color: #343541;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: #b8b9c3;
+    border-radius: 4px;
+}
+
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background-color: #ececf1;
+}
+
+.avatar {
+    width: 30px;
+    height: 30px;
+}

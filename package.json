@@ -1,0 +1,20 @@
+{
+  "name": "chatnlp",
+  "version": "1.0.0",
+  "description": "ChatNLP is a Natural Language Processing (NLP) that answers prompts from a user.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "train": "node src/train.js",
+    "start": "node src/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nlpjs/basic": "^4.27.0",
+    "chalk": "^4.1.2",
+    "express": "^4.18.2",
+    "node-nlp": "^4.27.0"
+  }
+}
