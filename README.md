@@ -22,7 +22,7 @@
 
 ## About The Project
 
-ChatNLP is a Natural Language Processing (NLP) chatbot that answers prompts from a user. It was trained on a customized dataset provided inside the `./src/train.json`. Trained model doesn't have a lot of data, so it is not very accurate. However, it is able to answer some questions. Some of the parts are assisted by `./src/helpers/customActions.js` which detects a action by doing a regex match on the prompt.
+ChatNLP is a Natural Language Processing (NLP) chatbot that answers prompts from a user. It was trained on a customized dataset provided inside the `./src/data/train.json`. Trained model doesn't have a lot of data, so it is not very accurate. However, it is able to answer some questions. Some of the parts are assisted by `./src/helpers/customActions.js` which detects a action by doing a regex match on the prompt.
 
 ## Getting Started
 
