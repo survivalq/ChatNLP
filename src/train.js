@@ -17,8 +17,20 @@ const { dockStart } = require('@nlpjs/basic');
   const manager = dock.get('nlp');
 
   const trainingData = JSON.parse(fs.readFileSync(path.join(__dirname, 'train.json'), 'utf8'));
+  const regexEntities = JSON.parse(fs.readFileSync(path.join(__dirname, 'regexEntities.json'), 'utf8'));
 
-  // Add training data with multiple random responses. Also add patterns for entities (context variables)
+  // (Optional) Adds regex entities, basically "context" that the NLP can use in chat
+  regexEntities.forEach(entityRule => {
+    if (Array.isArray(entityRule.regex)) {
+      entityRule.regex.forEach(pattern => {
+        manager.addNerRegexRule('en', entityRule.entityName, new RegExp(pattern, 'gi'));
+      });
+    } else {
+      manager.addNerRegexRule('en', entityRule.entityName, new RegExp(entityRule.regex, 'gi'));
+    }
+  });
+
+  // General training data
   trainingData.forEach(item => {
     item.utterances.forEach(utterance => {
       manager.addDocument('en', utterance, item.intent);
@@ -27,12 +39,6 @@ const { dockStart } = require('@nlpjs/basic');
     item.answers.forEach(answer => {
       manager.addAnswer('en', item.intent, answer);
     });
-
-    if (item.patterns) {
-      item.patterns.forEach(pattern => {
-        manager.addNerAfterLastCondition('en', pattern.entity, pattern.conditions);
-      });
-    }
   });
 
   await manager.train();

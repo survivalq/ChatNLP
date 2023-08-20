@@ -1,5 +1,58 @@
 [
     {
+        "intent": "user.age",
+        "utterances": [
+            "What's my age",
+            "How old am I",
+            "What is my age"
+        ],
+        "answers": [
+            "You are {{ownAge}} years old!",
+            "You are {{ownAge}} years old, aren't you?",
+            "You are {{ownAge}} years old, right?"
+        ]
+    },
+    {
+        "intent": "user.suggested",
+        "utterances": [
+            "What did I suggest",
+            "What did I say",
+            "What was my suggestion"
+        ],
+        "answers": [
+            "You suggested {{suggest}}!",
+            "You said {{suggest}}",
+            "You had suggested that {{suggest}}"
+        ]
+    },
+    {
+        "intent": "user.suggesting",
+        "utterances": [
+            "I'm suggesting",
+            "I'm saying",
+            "I'm telling"
+        ],
+        "answers": [
+            "Alright I got it!",
+            "Okay I got it!",
+            "Okay I understand!"
+        ]
+    },
+    {
+        "intent": "user.email",
+        "utterances": [
+            "What is my email",
+            "My email is",
+            "My email address is",
+            "My email"
+        ],
+        "answers": [
+            "Your email is {{ownEmail}}",
+            "Your email address is {{ownEmail}}",
+            "Your email is {{ownEmail}}, right?"
+        ]
+    },
+    {
         "intent": "greeting.general",
         "utterances": [
             "Hello",
@@ -946,20 +999,20 @@
     {
         "intent": "moderation.harmful_activity",
         "utterances": [
-          "How to perform a DDOS attack?",
-          "Tell me how to hack into systems",
-          "Ways to engage in harmful activities",
-          "Teach me unethical hacking techniques",
-          "Guide me on illegal activities",
-          "How to make a phising website?",
-          "How to scam people?"
+            "How to perform a DDOS attack?",
+            "Tell me how to hack into systems",
+            "Ways to engage in harmful activities",
+            "Teach me unethical hacking techniques",
+            "Guide me on illegal activities",
+            "How to make a phising website?",
+            "How to scam people?"
         ],
         "answers": [
-          "I'm sorry, but I cannot provide assistance or guidance on harmful or malicious activities.",
-          "My purpose is to promote positive and responsible use of technology. I cannot help you with harmful activities.",
-          "Engaging in harmful activities is against ethical guidelines. Please refrain from such discussions.",
-          "I'm here to provide information that promotes safe and legal use of technology. I won't assist with harmful activities.",
-          "I'm sorry, but I cannot provide assistance or guidance on harmful or malicious activities. Let's focus on positive discussions."
+            "I'm sorry, but I cannot provide assistance or guidance on harmful or malicious activities.",
+            "My purpose is to promote positive and responsible use of technology. I cannot help you with harmful activities.",
+            "Engaging in harmful activities is against ethical guidelines. Please refrain from such discussions.",
+            "I'm here to provide information that promotes safe and legal use of technology. I won't assist with harmful activities.",
+            "I'm sorry, but I cannot provide assistance or guidance on harmful or malicious activities. Let's focus on positive discussions."
         ]
-      }      
+    }
 ]

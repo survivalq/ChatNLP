@@ -1,0 +1,23 @@
+[
+    {
+        "entityName": "ownEmail",
+        "regex": [
+            "\\b(\\w[-._\\w]*\\w@\\w[-._\\w]*\\w\\.\\w{2,3})\\b",
+            "\\b(another@example.com)\\b"
+        ]
+    },
+    {
+        "entityName": "ownAge",
+        "regex": [
+            "\\b(\\d{1,2}) years old\\b",
+            "\\b(\\d{1,2}) years of age\\b",
+            "\\b(age is \\d{1,2})\\b"
+        ]
+    },
+    {
+        "entityName": "suggest",
+        "regex": [
+            "\\b(?:I suggest|I think|I would like|I want|I need) (.+)\\b"
+        ]
+    }
+]

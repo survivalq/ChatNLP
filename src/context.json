@@ -2,61 +2,25 @@
     {
         "intent": "user.age",
         "utterances": [
-            "My age is %age%",
-            "I'm %age% years old"
+            "What's my age",
+            "How old am I",
+            "What is my age"
         ],
         "answers": [
-            "You are {{ age }} years old!"
-        ],
-        "patterns": [
-            {
-                "entity": "age",
-                "conditions": [
-                    "is",
-                    "I'm"
-                ]
-            }
+            "You are {{ownAge}} years old!"
         ]
     },
     {
-        "intent": "user.name",
+        "intent": "user.suggest",
         "utterances": [
-            "My name is %name%",
-            "Call me %name%"
+            "I suggest %suggest%",
+            "I think %suggest%",
+            "I would like %suggest%",
+            "I want %suggest%",
+            "I need %suggest%"
         ],
         "answers": [
-            "Hello {{ name }}!"
-        ],
-        "patterns": [
-            {
-                "entity": "name",
-                "conditions": [
-                    "is"
-                ]
-            }
-        ]
-    },
-    {
-        "intent": "user.summary",
-        "utterances": [
-            "Tell me about me",
-            "Summarize my information",
-            "Recap my details"
-        ],
-        "answers": [
-            "You are {{age}} years old and your name is {{name}}.",
-            "Your name is {{name}} and you are {{age}} years old.",
-            "You are {{age}} years old and your name is {{name}}.",
-            "Your called {{name}} and you are {{age}} years old."
-        ]
-    },     
-    {
-        "intent": "user.age",
-        "utterances": [
-            "What's my age?"
-        ],
-        "answers": [
-            "You are {{age}} years old!"
+            "You suggested {{suggest}}!"
         ]
     }
 ]
