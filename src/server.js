@@ -2,7 +2,7 @@ const express = require('express');
 const chalk = require('chalk');
 const path = require('path');
 const { dockStart } = require('@nlpjs/basic');
-const { isMathOperation, performMathOperation, isJavaScriptExecution, executeJavaScript } = require('./helpers/customActions');
+const customActions = require('./helpers/customActions');
 
 const app = express();
 const context = {};
@@ -28,11 +28,11 @@ app.use(express.static(path.join(__dirname, '../public')));
   app.post('/ask', async (req, res) => {
     const { text } = req.body;
 
-    if (isMathOperation(text)) {
-      const result = performMathOperation(text);
+    if (customActions.isMathOperation(text)) {
+      const result = customActions.performMathOperation(text);
       res.json({ answer: result });
-    } else if (isJavaScriptExecution(text)) {
-      const result = executeJavaScript(text);
+    } else if (customActions.isJavaScriptExecution(text)) {
+      const result = customActions.executeJavaScript(text);
       res.json({ answer: result });
     } else {
       const response = await manager.process('en', text, context);

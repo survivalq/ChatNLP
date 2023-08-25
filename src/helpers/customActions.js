@@ -47,4 +47,9 @@ function executeJavaScript(command) {
     }
 };
 
-module.exports = { isMathOperation, performMathOperation, isJavaScriptExecution, executeJavaScript };  
+module.exports = { 
+    isMathOperation, 
+    performMathOperation, 
+    isJavaScriptExecution, 
+    executeJavaScript 
+};  
